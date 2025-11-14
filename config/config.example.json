@@ -1,0 +1,23 @@
+{
+  "wifi_ssid": "YOUR_WIFI_SSID",
+  "wifi_password": "YOUR_WIFI_PASSWORD",
+  "server_url": "http://192.168.1.100:5000",
+  "device_id": "BIN001",
+  "bin_height": 100,
+  "update_interval": 60,
+  "alert_threshold": 80,
+  "sensor": {
+    "trig_pin": 5,
+    "echo_pin": 4,
+    "max_distance": 400
+  },
+  "backend": {
+    "host": "0.0.0.0",
+    "port": 5000,
+    "debug": true
+  },
+  "database": {
+    "path": "smartbin.db",
+    "backup_enabled": true
+  }
+}

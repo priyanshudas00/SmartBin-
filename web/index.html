@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🗑️ SmartBin Dashboard</h1>
+            <p class="subtitle">IoT Smart Waste Management System</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <h3>Total Bins</h3>
+                <p class="stat-value" id="totalBins">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Avg Fill Level</h3>
+                <p class="stat-value" id="avgFillLevel">0%</p>
+            </div>
+            <div class="stat-card alert">
+                <h3>Needs Attention</h3>
+                <p class="stat-value" id="binsNeedingAttention">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Readings</h3>
+                <p class="stat-value" id="totalReadings">0</p>
+            </div>
+        </section>
+
+        <!-- Bins Grid -->
+        <section class="bins-section">
+            <h2>Active Bins</h2>
+            <div id="binsGrid" class="bins-grid">
+                <!-- Bins will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Server Configuration -->
+        <section class="config-section">
+            <h2>Server Configuration</h2>
+            <div class="config-form">
+                <label for="serverUrl">Server URL:</label>
+                <input type="text" id="serverUrl" value="http://localhost:5000" placeholder="http://localhost:5000">
+                <button onclick="updateServerUrl()">Update</button>
+                <button onclick="refreshData()">Refresh Data</button>
+            </div>
+        </section>
+
+        <!-- Status Message -->
+        <div id="statusMessage" class="status-message"></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SmartBin - IoT Smart Waste Management System</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
